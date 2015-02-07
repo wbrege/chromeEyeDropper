@@ -153,7 +153,7 @@ var page = {
     if (!page.dropperActivated)
      return;
 
-    ////console.log("Scroll stop");
+    console.log("Scroll stop");
     page.screenChanged();
   },
 
