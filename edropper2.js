@@ -359,6 +359,7 @@ var page = {
     if (!page.dropperActivated)
       return;
 
+    console.log("screenChanged");
     page.YOffset = $(document).scrollTop();
     page.XOffset = $(document).scrollLeft();
 
@@ -368,7 +369,7 @@ var page = {
     if ( !force && page.rects.length > 0 ) {
       for ( index in page.rects ) {
         if ( page.rectInRect(rect, page.rects[index]) ) {
-          ////console.log('uz mame, nefotim');
+          console.log('already shoted, skipping');
           return;
         }
       }
@@ -378,7 +379,7 @@ var page = {
 
     $("#eye-dropper-overlay").css('cursor','progress')
 
-    ////console.log('I want new screenshot');
+    console.log('screenshoting');
     // TODO: this is terrible. It have to be done better way
     if ( page.options.enableColorTooltip === true && page.options.enableColorToolbox === true) {
       page.elColorTooltip.hide(1, function() {
