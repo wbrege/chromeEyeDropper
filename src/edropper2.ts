@@ -147,7 +147,7 @@ var page = {
     },
     onMouseClick: function(e: MouseEvent) {
         console.log('dropper: mouse click')
-        console.log(e)
+        console.log(JSON.stringify(e))
         if (!page.dropperActivated) return
         e.preventDefault()
         page.dropperDeactivate()
@@ -156,7 +156,7 @@ var page = {
         const y = e.pageY
 
         const color = page.pickColor(x, y)
-        console.log(`dropper: move: ${x},${y}. Color: ${color.rgbhex}`)
+        console.log(`dropper: click: ${x},${y}. Color: ${color.rgbhex}`)
 
         page.sendMessage({
             type: 'set-color',
