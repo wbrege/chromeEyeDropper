@@ -8,6 +8,7 @@ interface BgSettings {
     enableColorToolbox: boolean
     enableColorTooltip: boolean
     enableRightClickDeactivate: boolean
+    enableShowRGBNormed: boolean
     dropperCursor: string
     plus: boolean
     plus_type: string
@@ -50,6 +51,7 @@ var bg = {
         enableColorToolbox: true,
         enableColorTooltip: true,
         enableRightClickDeactivate: true,
+        enableShowRGBNormed: false,
         dropperCursor: 'default',
         plus: false,
         plus_type: null,
